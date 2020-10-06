@@ -1,5 +1,4 @@
-package com.example.myapplication
-
+package com.example.spyfall
 import org.junit.Test
 
 import org.junit.Assert.*
