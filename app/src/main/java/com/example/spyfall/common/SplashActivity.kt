@@ -1,11 +1,10 @@
-package com.example.spyfall
+package com.example.spyfall.common
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.spyfall.R
 
 class SplashActivity : AppCompatActivity() {
 

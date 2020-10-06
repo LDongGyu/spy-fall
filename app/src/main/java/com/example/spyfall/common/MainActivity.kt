@@ -1,7 +1,8 @@
-package com.example.spyfall
+package com.example.spyfall.common
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.spyfall.R
 
 class MainActivity : AppCompatActivity() {
 
