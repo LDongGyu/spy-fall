@@ -6,13 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".common.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/game_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="게임 시작"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/tutorial_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="튜토리얼"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
