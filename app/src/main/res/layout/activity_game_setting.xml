@@ -17,7 +17,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="인원수 (4 - 10인)"/>
+                android:text="인원수 (04 - 10인)"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -30,7 +30,7 @@
                     android:id="@+id/playerCountTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4"/>
+                    android:text="04"/>
                 <Button
                     android:id="@+id/plusBtn"
                     android:layout_width="wrap_content"
