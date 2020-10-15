@@ -1,10 +1,12 @@
 package com.example.spyfall.common
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.example.spyfall.R
+import com.example.spyfall.common.game.CharacterSelectActivity
 import kotlinx.android.synthetic.main.activity_game_setting.*
 import kotlinx.android.synthetic.main.activity_game_setting.view.*
 
@@ -20,6 +22,7 @@ class GameSettingActivity : AppCompatActivity() {
         minMinusBtn.setOnClickListener(minMinusBtnClickListener)
         secondPlusBtn.setOnClickListener(secondPlusBtnClickListener)
         secondMinusBtn.setOnClickListener(secondMinusBtnClickListener)
+        startBtn.setOnClickListener(startBtnClickListener)
     }
 
     private val playerMinusBtnClickListener: View.OnClickListener = View.OnClickListener {
@@ -64,10 +67,15 @@ class GameSettingActivity : AppCompatActivity() {
 
     private val secondMinusBtnClickListener: View.OnClickListener = View.OnClickListener {
         var second = secondTxt.text.toString().toInt()
-        when(second) {
+        when (second) {
             0 -> secondTxt.text = String.format("%d", 59)
             in 1..10 -> secondTxt.text = String.format("0%d", second - 1)
             else -> secondTxt.text = String.format("%d", second - 1)
         }
+    }
+
+    private val startBtnClickListener: View.OnClickListener = View.OnClickListener {
+        startActivity(Intent(this, CharacterSelectActivity::class.java))
+        finish()
     }
 }
