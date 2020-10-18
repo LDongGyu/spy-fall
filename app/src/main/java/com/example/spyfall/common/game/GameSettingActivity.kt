@@ -1,4 +1,4 @@
-package com.example.spyfall.common
+package com.example.spyfall.common.game
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.example.spyfall.R
-import com.example.spyfall.common.game.CharacterSelectActivity
 import kotlinx.android.synthetic.main.activity_game_setting.*
-import kotlinx.android.synthetic.main.activity_game_setting.view.*
 
 class GameSettingActivity : AppCompatActivity() {
 

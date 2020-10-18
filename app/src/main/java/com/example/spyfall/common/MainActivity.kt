@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.spyfall.R
 import com.example.spyfall.common.Tutorial.TutorialActivity
+import com.example.spyfall.common.game.GameSettingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val gameBtnClickListener: View.OnClickListener = View.OnClickListener {
-        startActivity(Intent(this,GameSettingActivity::class.java))
+        startActivity(Intent(this,
+            GameSettingActivity::class.java))
         finish()
     }
 
