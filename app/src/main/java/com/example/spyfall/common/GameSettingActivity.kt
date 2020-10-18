@@ -75,7 +75,10 @@ class GameSettingActivity : AppCompatActivity() {
     }
 
     private val startBtnClickListener: View.OnClickListener = View.OnClickListener {
-        startActivity(Intent(this, CharacterSelectActivity::class.java))
+        var intent = Intent(this, CharacterSelectActivity::class.java)
+        intent.putExtra("player",playerCountTxt.text)
+        intent.putExtra("time",String.format("%s%s",minTxt,secondTxt))
+        startActivity(intent)
         finish()
     }
 }
