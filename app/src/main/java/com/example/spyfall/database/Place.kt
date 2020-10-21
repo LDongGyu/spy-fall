@@ -5,6 +5,6 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Place (
-    @PrimaryKey(autoGenerate = true) var id: Int,
-    var name: String
+    @PrimaryKey(autoGenerate = true) var placeId: Int,
+    var placeName: String
 )

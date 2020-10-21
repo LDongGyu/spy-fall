@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Character (
-    @PrimaryKey(autoGenerate = true) var id: Int,
-    var placeId: Int,
-    var name: String
+    @PrimaryKey(autoGenerate = true) var characterId: Int,
+    var placeBelongId: Int,
+    var characterName: String
 )
