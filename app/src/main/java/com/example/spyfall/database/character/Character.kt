@@ -1,4 +1,4 @@
-package com.example.spyfall.database
+package com.example.spyfall.database.character
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

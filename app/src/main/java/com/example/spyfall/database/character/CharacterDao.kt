@@ -1,4 +1,4 @@
-package com.example.spyfall.database.dao
+package com.example.spyfall.database.character
 
 import androidx.room.*
 

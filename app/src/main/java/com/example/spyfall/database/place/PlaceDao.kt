@@ -1,7 +1,6 @@
-package com.example.spyfall.database.dao
+package com.example.spyfall.database.place
 
 import androidx.room.*
-import com.example.spyfall.database.Place
 
 @Dao
 interface PlaceDao {
