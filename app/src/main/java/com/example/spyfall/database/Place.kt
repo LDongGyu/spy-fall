@@ -1,10 +1,12 @@
 package com.example.spyfall.database
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "place")
 data class Place (
-    @PrimaryKey(autoGenerate = true) var placeId: Int,
-    var placeName: String
+    @PrimaryKey
+    @ColumnInfo(name = "place_id") val placeId: Int,
+    @ColumnInfo(name = "place_name") val placeName: String
 )
