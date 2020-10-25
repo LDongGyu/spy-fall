@@ -6,4 +6,42 @@
     android:layout_height="match_parent"
     tools:context="com.example.spyfall.common.game.CharacterSelectActivity">
 
+    <TextView
+        android:id="@+id/card_front"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:text="Front"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/card_back"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:text="back"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/flip_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="뒤집기"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
