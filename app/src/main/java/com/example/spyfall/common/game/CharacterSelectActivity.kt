@@ -22,12 +22,13 @@ class CharacterSelectActivity : AppCompatActivity() {
     lateinit var characterArr: Array<String>
     var playerNum = 0
     var placeName = ""
+    var time = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character_select)
 
-        var time = intent.getStringExtra("time") ?: "0800"
+        time = intent.getIntExtra("time",480)
         playerNum = intent.getStringExtra("player").toInt()
         // DB에서 랜덤으로 주제 가져오기
         // 주제에서 랜덤으로 명수만큼 가져오기
@@ -58,7 +59,9 @@ class CharacterSelectActivity : AppCompatActivity() {
     val flipBtnClickListener: View.OnClickListener = View.OnClickListener {
 
         if(player == playerNum){
-            startActivity(Intent(this,GameTimerActivity::class.java))
+            var intent = Intent(this,GameTimerActivity::class.java)
+            intent.putExtra("time",time)
+            startActivity(intent)
             finish()
         }
 
