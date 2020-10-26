@@ -23,6 +23,7 @@ class CharacterSelectActivity : AppCompatActivity() {
     var playerNum = 0
     var placeName = ""
     var time = 0
+    var spyNum = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +62,7 @@ class CharacterSelectActivity : AppCompatActivity() {
         if(player == playerNum){
             var intent = Intent(this,GameTimerActivity::class.java)
             intent.putExtra("time",time)
+            intent.putExtra("spy",spyNum)
             startActivity(intent)
             finish()
         }
@@ -86,7 +88,7 @@ class CharacterSelectActivity : AppCompatActivity() {
     }
 
     fun characterSet(list: MutableList<String>, num: Int){
-        var spyNum = Random.nextInt(num)
+        spyNum = Random.nextInt(num)
         Log.d("selectChar","num : ${num}, spy : ${spyNum}")
         for(i in 0..num-1){
             var nowRand = Random.nextInt(list.size)
