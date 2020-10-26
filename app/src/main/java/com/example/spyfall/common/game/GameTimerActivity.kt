@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
+import android.view.View
 import com.example.spyfall.R
 import kotlinx.android.synthetic.main.activity_game_timer.*
 
@@ -20,6 +21,7 @@ class GameTimerActivity : AppCompatActivity() {
         var downTimer = object : CountDownTimer(totalTime * 1000,1000){
             override fun onFinish() {
                 timer.text = "Finish!"
+                openBtn.visibility = View.VISIBLE
             }
 
             override fun onTick(p0: Long) {
@@ -42,7 +44,11 @@ class GameTimerActivity : AppCompatActivity() {
         }
 
         downTimer.start()
+
+        openBtn.setOnClickListener(openBtnClickListener)
     }
 
-
+    val openBtnClickListener: View.OnClickListener = View.OnClickListener {
+        timer.text = "스파이는 ${intent.getIntExtra("spy",0)}번이었습니다."
+    }
 }
