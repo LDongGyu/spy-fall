@@ -44,8 +44,11 @@ class GameSettingActivity : AppCompatActivity() {
 
     private val minPlusBtnClickListener: View.OnClickListener = View.OnClickListener {
         var min = minTxt.text.toString().toInt()
-        if(min < 9) minTxt.text = String.format("0%d",min+1)
-        else minTxt.text = String.format("%d",min+1)
+        when(min){
+            in 0..9 -> minTxt.text = String.format("0%d",min+1)
+            in 10..58 -> minTxt.text = String.format("%d",min+1)
+            else -> minTxt.text = "00"
+        }
     }
 
     private val minMinusBtnClickListener: View.OnClickListener = View.OnClickListener {
@@ -59,8 +62,11 @@ class GameSettingActivity : AppCompatActivity() {
 
     private val secondPlusBtnClickListener: View.OnClickListener = View.OnClickListener {
         var second = secondTxt.text.toString().toInt()
-        if(second < 9) secondTxt.text = String.format("0%d",second+1)
-        else secondTxt.text = String.format("%d",second+1)
+        when(second){
+            in 0..9 -> secondTxt.text = String.format("0%d",second+1)
+            in 10..58 -> secondTxt.text = String.format("%d",second+1)
+            else -> secondTxt.text = "00"
+        }
     }
 
     private val secondMinusBtnClickListener: View.OnClickListener = View.OnClickListener {
