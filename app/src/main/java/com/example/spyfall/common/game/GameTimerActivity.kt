@@ -1,15 +1,18 @@
 package com.example.spyfall.common.game
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import com.example.spyfall.R
+import com.example.spyfall.common.MainActivity
 import kotlinx.android.synthetic.main.activity_game_timer.*
 
 class GameTimerActivity : AppCompatActivity() {
 
+    private var version = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +52,14 @@ class GameTimerActivity : AppCompatActivity() {
     }
 
     val openBtnClickListener: View.OnClickListener = View.OnClickListener {
-        timer.text = "스파이는 ${intent.getIntExtra("spy",0)}번이었습니다."
+        if(version == 0) {
+            timer.text = "스파이는 ${intent.getIntExtra("spy", 0)}번이었습니다."
+            openBtn.text = "메인으로"
+            version++
+        }
+        else {
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
     }
 }
