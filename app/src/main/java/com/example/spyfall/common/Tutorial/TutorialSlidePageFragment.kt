@@ -19,11 +19,11 @@ class TutorialSlidePageFragment(position: Int) : Fragment() {
         view.txt.text = position.toString()
 
         when(position){
-            0 -> view.setBackgroundColor(Color.parseColor("#b9fffc"))
-            1 -> view.setBackgroundColor(Color.parseColor("#a3d8f4"))
-            2 -> view.setBackgroundColor(Color.parseColor("#9ab3f5"))
+            0 -> view.setBackgroundColor(Color.parseColor("#d9598c"))
+            1 -> view.setBackgroundColor(Color.parseColor("#db706c"))
+            2 -> view.setBackgroundColor(Color.parseColor("#f1d2e7"))
             3 -> {
-                view.setBackgroundColor(Color.parseColor("#7579e7"))
+                view.setBackgroundColor(Color.parseColor("#bbb0dc"))
                 view.btn.visibility = View.VISIBLE
                 view.btn.setOnClickListener {
                     startActivity(Intent(context, MainActivity::class.java))
