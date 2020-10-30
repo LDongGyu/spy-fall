@@ -27,6 +27,7 @@ class TutorialSlidePageFragment(position: Int) : Fragment() {
                 view.btn.visibility = View.VISIBLE
                 view.btn.setOnClickListener {
                     startActivity(Intent(context, MainActivity::class.java))
+                    activity?.finish()
                 }
             }
         }
