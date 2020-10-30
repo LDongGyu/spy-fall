@@ -22,11 +22,9 @@ class MainActivity : AppCompatActivity() {
     private val gameBtnClickListener: View.OnClickListener = View.OnClickListener {
         startActivity(Intent(this,
             GameSettingActivity::class.java))
-        finish()
     }
 
     private val tutorialBtnClickListener: View.OnClickListener = View.OnClickListener {
         startActivity(Intent(this, TutorialActivity::class.java))
-        finish()
     }
 }
