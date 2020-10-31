@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private val gameBtnClickListener: View.OnClickListener = View.OnClickListener {
         startActivity(Intent(this,
             GameSettingActivity::class.java))
+        overridePendingTransition(R.animator.fade_in, R.animator.fade_out);
     }
 
     private val tutorialBtnClickListener: View.OnClickListener = View.OnClickListener {
