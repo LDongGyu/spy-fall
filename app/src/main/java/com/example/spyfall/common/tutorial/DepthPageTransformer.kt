@@ -1,4 +1,4 @@
-package com.example.spyfall.common.Tutorial
+package com.example.spyfall.common.tutorial
 
 import android.view.View
 import androidx.annotation.RequiresApi

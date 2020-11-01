@@ -1,4 +1,4 @@
-package com.example.spyfall.common.Tutorial
+package com.example.spyfall.common.tutorial
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

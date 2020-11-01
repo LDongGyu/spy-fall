@@ -1,4 +1,4 @@
-package com.example.spyfall.common.Tutorial
+package com.example.spyfall.common.tutorial
 
 import android.content.Intent
 import android.graphics.Color
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.spyfall.R
-import com.example.spyfall.common.MainActivity
+import com.example.spyfall.common.dashboard.MainActivity
 import kotlinx.android.synthetic.main.fragment_screen_slide_page.view.*
 
 class TutorialSlidePageFragment(position: Int) : Fragment() {
