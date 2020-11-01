@@ -5,6 +5,7 @@ import android.animation.AnimatorSet
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import androidx.room.Room
@@ -85,6 +86,11 @@ class CharacterSelectActivity : AppCompatActivity() {
             front_anim.start()
             isFront = true
         }
+
+        flip_btn.visibility=View.GONE
+        Handler().postDelayed({
+            flip_btn.visibility=View.VISIBLE
+        },1000)
     }
 
     fun characterSet(list: MutableList<String>, num: Int){
