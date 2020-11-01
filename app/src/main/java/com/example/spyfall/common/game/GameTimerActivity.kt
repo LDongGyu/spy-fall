@@ -7,7 +7,7 @@ import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import com.example.spyfall.R
-import com.example.spyfall.common.MainActivity
+import com.example.spyfall.common.dashboard.MainActivity
 import kotlinx.android.synthetic.main.activity_game_timer.*
 
 class GameTimerActivity : AppCompatActivity() {

@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.example.spyfall.R
-import com.example.spyfall.common.Tutorial.TutorialActivity
+import com.example.spyfall.common.dashboard.MainActivity
+import com.example.spyfall.common.tutorial.TutorialActivity
 
 class SplashActivity : AppCompatActivity() {
 
