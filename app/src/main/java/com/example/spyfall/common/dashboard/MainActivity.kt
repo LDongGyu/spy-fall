@@ -1,11 +1,11 @@
-package com.example.spyfall.common
+package com.example.spyfall.common.dashboard
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.spyfall.R
-import com.example.spyfall.common.Tutorial.TutorialActivity
+import com.example.spyfall.common.tutorial.TutorialActivity
 import com.example.spyfall.common.game.GameSettingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
