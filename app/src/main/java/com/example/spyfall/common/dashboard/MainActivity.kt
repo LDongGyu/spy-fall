@@ -2,18 +2,21 @@ package com.example.spyfall.common.dashboard
 
 import android.content.Intent
 import android.graphics.drawable.Icon
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.spyfall.R
-import com.example.spyfall.common.tutorial.TutorialActivity
 import com.example.spyfall.common.game.GameSettingActivity
+import com.example.spyfall.common.tutorial.TutorialActivity
 import com.example.spyfall.database.GameInfoDataBase
-import com.example.spyfall.database.place.Place
 import com.example.spyfall.database.place.PlaceMap.placeMap
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.random.Random
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +29,9 @@ class MainActivity : AppCompatActivity() {
         game_btn.setOnClickListener(gameBtnClickListener)
         tutorial_btn.setOnClickListener(tutorialBtnClickListener)
         placeList.layoutManager =  LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        getPlaceData()
+        runBlocking {
+            getPlaceData()
+        }
         placeList.adapter = PlaceListAdapter(placeData)
     }
 
@@ -40,12 +45,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, TutorialActivity::class.java))
     }
 
-    private fun getPlaceData(){
+    private fun getPlaceData() {
         val dbRead = Runnable {
-            var db = GameInfoDataBase.getInstance(this)
+            var db = GameInfoDataBase.getInstance(applicationContext)
             var placeAll = db?.placeDao()?.loadAllPlaces()
             placeAll?.forEach {
-                placeData.add(PlaceItem(Icon.createWithResource(this,placeMap[it.placeName]?:R.drawable.spyblack),it.placeName))
+                placeData.add(PlaceItem(Icon.createWithResource(applicationContext,placeMap[it.placeName]?:R.drawable.spyblack),it.placeName))
             }
         }
         val dbThread = Thread(dbRead)
