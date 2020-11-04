@@ -60,6 +60,8 @@ class CharacterSelectActivity : AppCompatActivity() {
 
     val flipBtnClickListener: View.OnClickListener = View.OnClickListener {
 
+
+
         if(player == playerNum){
             var intent = Intent(this,GameTimerActivity::class.java)
             intent.putExtra("time",time)
@@ -77,6 +79,11 @@ class CharacterSelectActivity : AppCompatActivity() {
             job.text = characterArr[player]
             if(job.text == "Spy") place.text = ""
             else place.text = placeName
+
+            if(player == playerNum-1){
+                prompt.text = "아래 '시작' 버튼을 누르면\n타이머가 시작됩니다."
+                flip_btn.text = "시작"
+            }
             player++
         }
         else{
