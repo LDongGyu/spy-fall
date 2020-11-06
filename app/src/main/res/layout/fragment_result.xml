@@ -1,12 +1,113 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
     tools:context="com.example.spyfall.common.game.fragment.ResultFragment">
 
-    <TextView
-        android:id="@+id/answer"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuide"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".90"
+        />
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".30"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/BottomGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".70"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/buttonGuid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".90"
+        />
+
+
+    <TextView
+        android:id="@+id/placePrompt"
+        android:text="장소는"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/placeAnswer"
+        app:layout_constraintTop_toTopOf="@id/topGuide"/>
+
+    <TextView
+        android:id="@+id/placeAnswer"
+        android:text="학교"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:background="@drawable/red_btn"
+        android:gravity="center"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="@id/rightGuide"
+        app:layout_constraintTop_toTopOf="@id/topGuide"/>
+
+    <TextView
+        android:id="@+id/spyPrompt"
+        android:text="스파이는"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/spyAnswer"
+        app:layout_constraintTop_toBottomOf="@id/placePrompt"
+        app:layout_constraintBottom_toTopOf="@id/prompt"/>
+
+    <TextView
+        android:id="@+id/spyAnswer"
+        android:text="3p"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:background="@drawable/red_btn"
+        android:gravity="center"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="@id/rightGuide"
+        app:layout_constraintTop_toBottomOf="@id/placeAnswer"
+        app:layout_constraintBottom_toTopOf="@id/prompt"/>
+
+    <TextView
+        android:id="@+id/prompt"
+        android:text="입니다!"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/BottomGuide"/>
+
+    <Button
+        android:text="메인으로"
+        android:textSize="32dp"
+        android:textColor="@color/white"
+        android:background="@drawable/red_btn"
+        android:gravity="center"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonGuid"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
