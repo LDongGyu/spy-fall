@@ -66,6 +66,7 @@ class CharacterSelectActivity : AppCompatActivity() {
             var intent = Intent(this,GameTimerActivity::class.java)
             intent.putExtra("time",time)
             intent.putExtra("spy",spyNum)
+            intent.putExtra("place",placeName)
             startActivity(intent)
             finish()
         }
