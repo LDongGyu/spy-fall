@@ -1,7 +1,5 @@
 package com.example.spyfall.common.game.fragment
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -10,18 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.spyfall.R
+import com.example.spyfall.common.game.GameInfo
 import kotlinx.android.synthetic.main.fragment_timer.view.*
 
 class TimerFragment() : Fragment() {
-
-    private var total: Long = 0
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            total = it.getLong("time")
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,7 +19,7 @@ class TimerFragment() : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_timer, container, false)
-        var downTimer = object : CountDownTimer(total * 1000,1000){
+        var downTimer = object : CountDownTimer(GameInfo.time.toLong() * 1000,1000){
             override fun onFinish() {
                 view.timer.text = "Finish!"
             }

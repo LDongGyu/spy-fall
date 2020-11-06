@@ -1,25 +1,15 @@
 package com.example.spyfall.common.game.fragment
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.spyfall.R
+import com.example.spyfall.common.game.GameInfo
 import kotlinx.android.synthetic.main.fragment_result.view.*
 
 class ResultFragment : Fragment() {
-    private var spy = 0
-    private var place = "장소"
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            spy = it.getInt("spy")
-            place = it.getString("place") ?: "학교"
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,8 +17,8 @@ class ResultFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_result, container, false)
-        view.placeAnswer.text = place
-        view.spyAnswer.text = "${spy+1}P"
+        view.placeAnswer.text = GameInfo.place
+        view.spyAnswer.text = "${GameInfo.spy+1}P"
 
         return view
     }

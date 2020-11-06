@@ -18,11 +18,11 @@ class GameTimerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_timer)
 
-        var totalTime = intent.getIntExtra("time",480).toLong()
+        var totalTime = GameInfo.time
 
         var fragment = TimerFragment()
         var bundle = Bundle()
-        bundle.putLong("time",totalTime)
+        bundle.putInt("time",totalTime)
         fragment.arguments = bundle
 
         var fragmentTransaction = supportFragmentManager.beginTransaction()

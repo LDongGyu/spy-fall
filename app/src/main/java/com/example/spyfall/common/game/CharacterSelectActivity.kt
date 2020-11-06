@@ -59,15 +59,12 @@ class CharacterSelectActivity : AppCompatActivity() {
     }
 
     val flipBtnClickListener: View.OnClickListener = View.OnClickListener {
-
-
-
+        
         if(player == playerNum){
-            var intent = Intent(this,GameTimerActivity::class.java)
-            intent.putExtra("time",time)
-            intent.putExtra("spy",spyNum)
-            intent.putExtra("place",placeName)
-            startActivity(intent)
+            GameInfo.time = time
+            GameInfo.spy = spyNum
+            GameInfo.place = placeName
+            startActivity(Intent(this,GameTimerActivity::class.java))
             finish()
         }
 
