@@ -7,7 +7,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "30.0.2"
     defaultConfig {
-        applicationId "com.example.spy-fall"
+        applicationId "com.example.spyfall"
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
