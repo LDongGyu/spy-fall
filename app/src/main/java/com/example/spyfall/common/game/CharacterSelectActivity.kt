@@ -59,7 +59,7 @@ class CharacterSelectActivity : AppCompatActivity() {
     }
 
     val flipBtnClickListener: View.OnClickListener = View.OnClickListener {
-        
+
         if(player == playerNum){
             GameInfo.time = time
             GameInfo.spy = spyNum
