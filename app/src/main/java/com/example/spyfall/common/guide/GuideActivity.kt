@@ -10,6 +10,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.spyfall.R
 import com.example.spyfall.common.dashboard.MainActivity
+import com.example.spyfall.common.dashboard.PlaceItem
 import com.example.spyfall.common.guide.fragment.*
 import kotlinx.android.synthetic.main.activity_guide.*
 
@@ -40,7 +41,10 @@ class GuideActivity : AppCompatActivity() {
             1 -> fragment = Guide2Fragment()
             2 -> fragment = Guide3Fragment()
             3 -> fragment = Guide4Fragment()
-            4 -> fragment = Guide5Fragment()
+            4 -> {
+                fragment = Guide5Fragment()
+                nextBtn.text = "메인으로"
+            }
             5 -> {
                 startActivity(Intent(applicationContext,MainActivity::class.java))
                 finish()

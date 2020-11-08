@@ -2,8 +2,6 @@ package com.example.spyfall.common.guide.fragment
 
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.Fragment
@@ -24,6 +22,7 @@ class Guide5Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         aniView = inflater.inflate(R.layout.fragment_guide5, container, false)
+
         var aniTest = AnimatorInflater.loadAnimator(activity,R.animator.slide_in) as AnimatorSet
         var layout = aniView.findViewById(R.id.num) as LinearLayout
         aniTest.setTarget(layout)
