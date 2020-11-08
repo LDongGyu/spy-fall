@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".common.tutorial.GuideActivity"></activity>
+        <activity android:name=".common.guide.GuideActivity"></activity>
         <activity android:name=".common.game.GameTimerActivity" />
         <activity android:name=".common.game.CharacterSelectActivity" />
         <activity android:name=".common.game.GameSettingActivity" />
@@ -21,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".common.dashboard.MainActivity" />
+        <activity android:name=".common.dashboard.MainActivity"
+            android:launchMode="singleTask"/>
     </application>
 
 </manifest>
