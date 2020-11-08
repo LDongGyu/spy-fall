@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import com.example.spyfall.R
 import com.example.spyfall.common.dashboard.MainActivity
-import com.example.spyfall.common.tutorial.TutorialActivity
+import com.example.spyfall.common.guide.GuideActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             if(sharedPreferences.getBoolean("first",true)){
                 sharedPreferences.edit().putBoolean("first",false).commit()
-                startActivity(Intent(this, TutorialActivity::class.java))
+                startActivity(Intent(this, GuideActivity::class.java))
                 finish()
             }
             else{

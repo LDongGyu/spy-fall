@@ -13,7 +13,6 @@
         <activity android:name=".common.game.GameTimerActivity" />
         <activity android:name=".common.game.CharacterSelectActivity" />
         <activity android:name=".common.game.GameSettingActivity" />
-        <activity android:name=".common.tutorial.TutorialActivity" />
         <activity android:name=".common.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
