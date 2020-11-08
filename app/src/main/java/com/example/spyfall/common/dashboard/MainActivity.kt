@@ -8,13 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.spyfall.R
 import com.example.spyfall.common.game.GameSettingActivity
-import com.example.spyfall.common.tutorial.TutorialActivity
+import com.example.spyfall.common.guide.GuideActivity
 import com.example.spyfall.database.GameInfoDataBase
 import com.example.spyfall.database.place.PlaceMap.placeMap
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 
@@ -42,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val tutorialBtnClickListener: View.OnClickListener = View.OnClickListener {
-        startActivity(Intent(this, TutorialActivity::class.java))
+        startActivity(Intent(this, GuideActivity::class.java))
     }
 
     private fun getPlaceData() {
