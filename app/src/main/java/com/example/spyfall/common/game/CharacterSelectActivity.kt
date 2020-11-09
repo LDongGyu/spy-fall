@@ -5,6 +5,7 @@ import android.animation.AnimatorSet
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import androidx.room.Room
@@ -60,10 +61,10 @@ class CharacterSelectActivity : AppCompatActivity() {
     val flipBtnClickListener: View.OnClickListener = View.OnClickListener {
 
         if(player == playerNum){
-            var intent = Intent(this,GameTimerActivity::class.java)
-            intent.putExtra("time",time)
-            intent.putExtra("spy",spyNum)
-            startActivity(intent)
+            GameInfo.time = time
+            GameInfo.spy = spyNum
+            GameInfo.place = placeName
+            startActivity(Intent(this,GameTimerActivity::class.java))
             finish()
         }
 
@@ -76,6 +77,11 @@ class CharacterSelectActivity : AppCompatActivity() {
             job.text = characterArr[player]
             if(job.text == "Spy") place.text = ""
             else place.text = placeName
+
+            if(player == playerNum-1){
+                prompt.text = "아래 '시작' 버튼을 누르면\n타이머가 시작됩니다."
+                flip_btn.text = "시작"
+            }
             player++
         }
         else{
@@ -85,6 +91,11 @@ class CharacterSelectActivity : AppCompatActivity() {
             front_anim.start()
             isFront = true
         }
+
+        flip_btn.visibility=View.GONE
+        Handler().postDelayed({
+            flip_btn.visibility=View.VISIBLE
+        },1000)
     }
 
     fun characterSet(list: MutableList<String>, num: Int){

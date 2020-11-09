@@ -3,6 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="select_prompt">아래 확인 버튼을 눌러 확인해주십시오.</string>
+    <string name="select_prompt">아래 확인 버튼을 눌러\n확인해주십시오.</string>
+    <string name="next_prompt">아래 \'다음\' 버튼을 눌러 뒤집고\n다음 사람에게 넘겨주세요.</string>
     <string name="select_spy_prompt">당신은 Spy입니다.</string>
 </resources>
