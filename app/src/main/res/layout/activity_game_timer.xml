@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.example.spyfall.common.game.GameTimerActivity">
+    tools:context="com.ilsang.spyfall.common.game.GameTimerActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topGuide"

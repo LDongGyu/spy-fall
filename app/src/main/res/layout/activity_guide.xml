@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.spyfall.common.guide.GuideActivity">
+    tools:context="com.ilsang.spyfall.common.guide.GuideActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/leftGuide"
