@@ -30,7 +30,7 @@
             android:id="@+id/txt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="첫번째 프레이어가\n먼저 질문을 합니다."
+            android:text="첫번째 플레이어가\n먼저 질문을 합니다."
             android:textSize="40dp"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
